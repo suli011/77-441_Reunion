@@ -238,17 +238,17 @@ body::before {
 .radar-card {
   padding: 18px;
   border-radius: 28px;
-  background: linear-gradient(180deg, rgba(66, 18, 28, 0.95), rgba(27, 8, 13, 0.9));
+  background: linear-gradient(180deg, rgba(10, 49, 33, 0.95), rgba(5, 21, 13, 0.92));
 }
 
 .radar-screen {
   position: relative;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
-  border: 1px solid rgba(242, 211, 138, 0.35);
+  border: 1px solid rgba(132, 242, 186, 0.4);
   background:
-    radial-gradient(circle, rgba(211, 61, 80, 0.16), rgba(31, 8, 14, 0.92) 68%),
-    #17080d;
+    radial-gradient(circle, rgba(72, 214, 138, 0.18), rgba(4, 23, 14, 0.94) 68%),
+    #07150d;
   overflow: hidden;
   box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.55);
 }
@@ -261,15 +261,15 @@ body::before {
 
 .radar-grid {
   background:
-    radial-gradient(circle, transparent 18%, rgba(242, 211, 138, 0.12) 18.7%, transparent 19.4%, transparent 39%, rgba(242, 211, 138, 0.11) 39.7%, transparent 40.4%, transparent 59%, rgba(242, 211, 138, 0.1) 59.7%, transparent 60.4%),
-    linear-gradient(rgba(242, 211, 138, 0.16) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(242, 211, 138, 0.16) 1px, transparent 1px);
+    radial-gradient(circle, transparent 18%, rgba(132, 242, 186, 0.14) 18.7%, transparent 19.4%, transparent 39%, rgba(132, 242, 186, 0.12) 39.7%, transparent 40.4%, transparent 59%, rgba(132, 242, 186, 0.1) 59.7%, transparent 60.4%),
+    linear-gradient(rgba(132, 242, 186, 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(132, 242, 186, 0.18) 1px, transparent 1px);
   background-size: 100% 100%, 24% 24%, 24% 24%;
   opacity: 0.85;
 }
 
 .radar-sweep {
-  background: conic-gradient(from 0deg, rgba(242, 211, 138, 0.42), transparent 18%, transparent 100%);
+  background: conic-gradient(from 0deg, rgba(132, 242, 186, 0.45), transparent 18%, transparent 100%);
   animation: sweep 7s linear infinite;
   transform-origin: 50% 50%;
   mix-blend-mode: screen;
@@ -280,8 +280,8 @@ body::before {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #fff2c9;
-  box-shadow: 0 0 0 6px rgba(255, 242, 201, 0.08), 0 0 16px rgba(255, 242, 201, 0.95);
+  background: #dffff0;
+  box-shadow: 0 0 0 6px rgba(223, 255, 240, 0.08), 0 0 16px rgba(223, 255, 240, 0.95);
 }
 
 .blip-one {
