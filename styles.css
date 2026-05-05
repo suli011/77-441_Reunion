@@ -204,6 +204,7 @@ body::before {
 }
 
 .hero-meta div,
+.meta-link,
 .detail-card,
 .timeline-item,
 .memory-card,
@@ -216,6 +217,21 @@ body::before {
 .hero-meta div {
   padding: 16px 18px;
   border-radius: 18px;
+}
+
+.meta-link {
+  display: block;
+  padding: 16px 18px;
+  border-radius: 18px;
+  color: var(--text);
+  text-decoration: none;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.meta-link:hover {
+  transform: translateY(-2px);
+  border-color: var(--line-strong);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .meta-label {
