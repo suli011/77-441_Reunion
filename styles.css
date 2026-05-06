@@ -91,7 +91,7 @@ body::before {
 }
 
 .topbar {
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(220px, 1fr) minmax(420px, 0.95fr) auto;
   align-items: center;
   gap: 16px;
 }
@@ -143,6 +143,44 @@ body::before {
   color: var(--text);
   text-decoration: none;
   font-weight: 700;
+}
+
+.event-banner {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.event-pill {
+  min-height: 76px;
+  padding: 14px 16px;
+  border: 1px solid var(--line-strong);
+  border-radius: 16px;
+  color: var(--text);
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.04);
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.event-pill:hover {
+  transform: translateY(-2px);
+  border-color: var(--gold);
+  background: rgba(242, 211, 138, 0.1);
+}
+
+.event-pill span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--gold);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.event-pill strong {
+  display: block;
+  font-size: 0.95rem;
+  line-height: 1.25;
 }
 
 .graduation-feature {
@@ -390,10 +428,32 @@ body::before {
   gap: 18px;
 }
 
+.event-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
 .detail-card,
 .memory-card {
   padding: 22px;
   border-radius: 24px;
+}
+
+.event-detail-card {
+  min-height: 230px;
+}
+
+.text-link {
+  display: inline-flex;
+  margin-top: 6px;
+  color: var(--gold);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  text-decoration: underline;
 }
 
 .card-number,
@@ -412,6 +472,10 @@ body::before {
 .memory-card h4 {
   font-size: 2rem;
   margin-bottom: 10px;
+}
+
+.detail-card.event-detail-card h4 {
+  font-size: clamp(2rem, 4vw, 3rem);
 }
 
 .timeline {
@@ -446,9 +510,19 @@ body::before {
 @media (max-width: 960px) {
   .hero-grid,
   .details-grid,
+  .event-details,
   .timeline,
   .memory-grid {
     grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    grid-template-columns: 1fr auto;
+  }
+
+  .event-banner {
+    grid-column: 1 / -1;
+    grid-row: 2;
   }
 
   .graduation-feature img {
@@ -481,6 +555,16 @@ body::before {
   .hero-meta,
   .hero-actions {
     grid-template-columns: 1fr;
+  }
+
+  .event-banner {
+    grid-template-columns: 1fr;
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .event-pill {
+    min-height: auto;
   }
 
   .button {
